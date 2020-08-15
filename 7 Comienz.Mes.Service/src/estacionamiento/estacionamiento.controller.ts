@@ -13,7 +13,6 @@ import * as csv from 'fast-csv';
 export class EstacionamientoController {
   constructor(private estacionamientoService: EstacionamientoService) {}
 
-  @ApiBody({  })
   @ApiResponse({
     status: 200,
     description: 'Registro creado correctamente',
@@ -25,8 +24,7 @@ export class EstacionamientoController {
   // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
   async comienzaMes(
     @Req() req,
-    @Res() res,
-    @Body() createDto: FilePdf,
+    @Res() res
   ): Promise<any> {
     try {
       const registros = await this.estacionamientoService.comienzaMes();
