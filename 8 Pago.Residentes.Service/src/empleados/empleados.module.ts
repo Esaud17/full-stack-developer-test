@@ -1,6 +1,5 @@
 import { EMPLEADOS } from './../common/models/models';
 import { Module } from "@nestjs/common";
-import { EmpleadosController } from "./empleados.controller";
 import { EmpleadosService } from "./services/empleados.service";
 import { MongooseModule } from "@nestjs/mongoose";
 import { EmpleadoSchema } from "./schemas/empleados.schema";
@@ -18,7 +17,7 @@ import { EmpleadoSchema } from "./schemas/empleados.schema";
       },
     ]),
   ],
-  controllers: [EmpleadosController],
+  controllers: [],
   providers: [EmpleadosService],
   exports: [EmpleadosService],
 })
